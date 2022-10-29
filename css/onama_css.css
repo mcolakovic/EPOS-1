@@ -1,0 +1,34 @@
+.fitpic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  max-width: none;
+}
+
+.fitdiv {
+  max-width: 60%;
+}
+
+.fitd {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.fitd1 {
+  padding: 30px;
+}
+
+#naslov {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1080px) {
+  .fitd {
+    flex-direction: column;
+  }
+  .fitdiv {
+    max-width: 100%;
+  }
+}

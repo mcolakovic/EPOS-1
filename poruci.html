@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.ico" />
+    <title>Izrada Web Sajtova</title>
+    <link rel="stylesheet" href="css/index_css.css" />
+    <link rel="stylesheet" href="css/poruci_css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  </head>
+  <body>
+    <section class="header1">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" /></a>
+        <div class="topnavlink" id="topNavLinks">
+          <img src="images/close2.png" class="close" />
+
+          <ul>
+            <li><a href="index.html">POČETNA</a></li>
+            <li><a href="onama.html">O NAMA</a></li>
+            <li><a href="cjenovnik.html">CJENOVNIK</a></li>
+            <li><a href="poruci.html">PORUČI SAJT</a></li>
+          </ul>
+        </div>
+        <img src="images/menu.png" class="menu" />
+      </nav>
+    </section>
+    <h1
+      style="
+        text-align: center;
+        padding: 0px 20px 10px 20px;
+        background-color: rgb(54, 131, 202);
+        color: white;
+      "
+    >
+      Poručite web sajt
+    </h1>
+    <section class="section3">
+      <form
+        class="section2"
+        id="forma"
+        action=""
+        onsubmit="return false"
+        style="overflow-x: auto"
+      >
+        <div class="polja">
+          <label for="ImeKorisnika">Ime korisnika <sup> * </sup>:</label>
+          <input
+            type="text"
+            size="20"
+            class="moveright"
+            id="ImeKorisnika"
+            name="ImeKorisnika"
+          />
+        </div>
+        <div class="polja">
+          <label for="PrezimeKorisnika"
+            >Prezime korisnika <sup> * </sup>:</label
+          >
+          <input
+            type="text"
+            size="20"
+            class="moveright"
+            id="PrezimeKorisnika"
+            name="PrezimeKorisnika"
+          />
+        </div>
+        <div class="polja">
+          <label for="user_email">e-mail <sup> * </sup>:</label>
+          <input
+            type="email"
+            size="30"
+            maxlength="30"
+            class="moveright"
+            id="user_email"
+            name="user_email"
+          />
+        </div>
+        <div class="polja">
+          <label for="BrojStrana">Broj web strana <sup> * </sup>:</label>
+          <input
+            type="number"
+            class="moveright"
+            size="20  "
+            id="BrojStrana"
+            name="BrojStrana"
+            min="1"
+            max="50"
+          />
+        </div>
+        <div class="polja">
+          <label for="NacinPlacanja">Nacin placanja <sup> * </sup>: </label>
+          <select class="moveright" name="NacinPlacanja" id="NacinPlacanja">
+            <option value="">-- odaberite nacin placanja --</option>
+            <option value="PayPal">PayPal</option>
+            <option value="Visa Card">Visa Card</option>
+            <option value="Master Card">Master Card</option>
+          </select>
+        </div>
+        <div class="box0">
+          <div class="box1">
+            <label for="Kljucno"> Kljucne stranice</label>
+            <hr />
+            <input
+              type="checkbox"
+              id="HomePage"
+              name="Izbor1"
+              value="Home page"
+            />
+            <label for="Izbor1"> Home Page</label><br />
+            <input
+              type="checkbox"
+              id="AboutUs"
+              name="Izbor2"
+              value="About us"
+            />
+            <label for="Izbor2"> About us</label><br />
+            <input
+              type="checkbox"
+              id="ContactPage"
+              name="Izbor3"
+              value="Contact page"
+            />
+            <label for="Izbor3"> Contact page</label><br />
+            <input
+              type="checkbox"
+              id="CustomPage"
+              name="Izbor3"
+              value="Custom page"
+            />
+            <label for="Izbor4"> Custom page</label><br /><br />
+          </div>
+
+          <div class="box2">
+            <label for="Rok"> Vrijeme realizacije : </label>
+            <hr />
+            <input type="radio" class="aa" name="BrojDana" value="do 7 dana" />
+            <label for="dana7">do 7 dana</label><br />
+            <input type="radio" name="BrojDana" value="do 14 dana" />
+            <label for="dana14">do 14 dana</label><br />
+            <input type="radio" name="BrojDana" value="do 21 dan" />
+            <label for="dana21">do 21 dan</label><br />
+            <input type="radio" name="BrojDana" value="do 28 dana" />
+            <label for="dana28">do 28 dana</label>
+          </div>
+        </div>
+        <label for="Komentar">
+          Unesite pojedinosti o sajtu <sup> * </sup>:</label
+        >
+        <br />
+        <textarea
+          class="moveright"
+          id="Komentar"
+          name="Komentar"
+          rows="4"
+          cols="50"
+        ></textarea>
+        <br />
+        <br />
+        <div class="dugme">
+          <input type="submit" id="dodaj" class="dodaj_red" value="Submit" />
+        </div>
+      </form>
+      <div class="rg-container">
+        <table id="SpisakZahtjeva" class="rg-table">
+          <caption class="rg-header">
+            <span class="rg-hed">Spisak zahtjeva :</span>
+          </caption>
+          <tbody id="last"></tbody>
+        </table>
+      </div>
+    </section>
+    <a href="#"><img class="gototop" src="images/top_arrow.png" /></a>
+    <script src="js/menu_jq.js"></script>
+    <script src="js/poruci_jq.js"></script>
+  </body>
+</html>

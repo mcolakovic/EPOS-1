@@ -1,0 +1,250 @@
+/* Dio koda koje si koristi za svaku stranu */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  background-blend-mode: screen;
+  width: 100%;
+  background-image: url(../images/pozadina3.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header1 {
+  min-height: 10vh;
+  background-blend-mode: screen;
+  width: 100%;
+  background-color: rgb(54, 131, 202);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 75px;
+}
+
+.topnavlink {
+  text-align: right;
+  flex: 1;
+}
+
+.topnavlink ul li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+}
+
+.topnavlink ul li a {
+  color: #fff;
+  text-decoration: dashed;
+  font-size: 14px;
+}
+
+.topnavlink ul li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #37daf0;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.topnavlink ul li:hover::after {
+  width: 100%;
+}
+
+sup {
+  color: red;
+}
+
+.gototop {
+  position: fixed;
+  right: 2%;
+  bottom: 3%;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+img.close {
+  display: none;
+}
+
+img.menu {
+  display: none;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 550;
+  margin: 10px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px;
+  font-size: 34px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px;
+  border: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Dio koga koji je samo potreban u index.html strani */
+
+.text-box {
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  position: absolute;
+  transform: translate(-40%, -60%);
+}
+
+.text-box h1 {
+  font-size: 50px;
+}
+
+.text-box p {
+  margin: 15px 0 50px;
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: double;
+  border: 2px solid #ffffff;
+  padding: 10px 25px;
+  background: transparent;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(11, 219, 105);
+  color: black;
+  border: 2px solid black;
+}
+
+.course {
+  border: 5px solid rgba(3, 23, 100, 0.7);
+  width: 99%;
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.row {
+  margin-top: 4%;
+  justify-content: space-around;
+  margin-bottom: 4%;
+  display: flex;
+}
+
+.course-col {
+  flex-basis: 45%;
+  border-radius: 5px;
+  background-color: #67cef7;
+  box-sizing: border-box;
+  margin: 4% 0 4% 0;
+}
+
+.end {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.end {
+  flex-basis: 45%;
+  border-radius: 5px;
+  background-color: #5bcaf7;
+  box-sizing: border-box;
+}
+
+.end:hover {
+  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 4);
+}
+
+.text1 {
+  text-align: left;
+}
+
+/* Dio koda koji sluzi za responzibilnost */
+
+@media (max-width: 1080px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .topnavlink ul li {
+    display: block;
+  }
+
+  .text-box h1 {
+    font-size: 22px;
+  }
+
+  .topnavlink {
+    position: absolute;
+    background: #1e1d61;
+    max-width: fit-content;
+    max-height: fit-content;
+    padding: 10px;
+    right: 0px;
+    top: 0px;
+    text-align: left;
+    z-index: 1;
+  }
+
+  img.close {
+    display: block;
+    color: #ffffff;
+    margin: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+
+  img.menu {
+    display: block;
+    color: #ffffff;
+    margin: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+}
